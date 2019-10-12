@@ -10,8 +10,7 @@ type HogeService struct {
 	hi infrastructure.HogeInfrastructure
 }
 
-func NewHogeService() *HogeService {
-	hi := infrastructure.NewHogeInfrastructure()
+func NewHogeService(hi *infrastructure.HogeInfrastructure) *HogeService {
 	return &HogeService{*hi}
 }
 

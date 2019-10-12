@@ -8,12 +8,10 @@ type HogeInfrastructure struct {
 	db MySQL
 }
 
-func NewHogeInfrastructure() *HogeInfrastructure {
-	var t MySQL
-	t = "MySQL"
-	log.Printf("connect DB(%s) on HogeInfrastructure\n", t)
+func NewHogeInfrastructure(db *MySQL) *HogeInfrastructure {
+	log.Printf("connect DB(%s) on HogeInfrastructure\n", *db)
 	return &HogeInfrastructure{
-		t,
+		*db,
 	}
 }
 
